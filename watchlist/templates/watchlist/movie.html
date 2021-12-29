@@ -1,0 +1,8 @@
+{% extends 'main.html' %}
+
+
+{% block content %}
+    <h1>{{title.title}}</h1>
+    <h2>{{title.poster_path}}</h2>
+    <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{title.poster_path}}" alt="...">
+{% endblock %}

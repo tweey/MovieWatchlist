@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1>Movies</h1>
+<div>
+    <div>
+        {% for title in popular.results %}
+        <div>
+            <img src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/{{title.poster_path}}" alt="">
+            <h5>
+                <a href="{% url 'movie' title.id %}">{{title.title}}</a>
+            </h5>
+            
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}
